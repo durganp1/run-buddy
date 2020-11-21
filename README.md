@@ -12,3 +12,5 @@ https://durganp1.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Petro
+
+### ©️2019 Run Buddy, Inc 
