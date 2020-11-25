@@ -264,6 +264,57 @@ section {
     font-size: 17px;
 }
 
+/* Service Plans Start */
+.services {
+    background-color: #fce138;
+}
+
+.service-grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.service-grid-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    background: lightyellow;
+    width: 80%;
+    border: 2px solid #024e76;
+    color: #024e76;
+    font-size: 1.2rem;
+}
+
+.service-grid-item {
+    padding: 15px 0;
+    border: 2px solid #024e76;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-grid-item.basic {
+    grid-column: 2 / span 1;
+}
+
+.service-grid-item.both {
+    grid-column: 2 / span 2;
+}
+
+.service-grid-item.cancel {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .contact {
     background: #024e76;
 }
@@ -412,6 +463,34 @@ section {
 
     .step-text {
         flex: 100%;
+    }
+
+    .service-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid-item.basic {
+       grid-column: 1;
+    }
+    
+    .service-grid-item.grid-head.basic {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .service-grid-item.grid-price {
+        grid-row: 6 / 8;
+    }
+    
+    .service-grid-item.both {
+        grid-column: 1 / 3;
+    }
+    
+    .service-grid-item.cancel {
+        writing-mode: horizontal-tb;
+        transform: none;
+        grid-column: 1 / 3;
+        grid-row: 8 / 9;
     }
 }
 
